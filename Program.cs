@@ -5,7 +5,7 @@ using Mflix.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+//Add services to the container.
 
 builder.Services.Configure<MoviesStoreDatabaseSettings>(
                  builder.Configuration.GetSection(nameof(MoviesStoreDatabaseSettings)));
@@ -17,6 +17,8 @@ builder.Services.AddSingleton<IMongoClient>(s =>
         new MongoClient(builder.Configuration.GetValue<string>("MoviesStoreDatabaseSettings:ConnectionString")));
 
 builder.Services.AddScoped<IMovieService, MovieService>();
+
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

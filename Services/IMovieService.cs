@@ -1,4 +1,5 @@
 ﻿using Mflix.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Mflix.Services
 {
@@ -9,6 +10,8 @@ namespace Mflix.Services
 		Movie Create(Movie movie);
 		void Update(string id, Movie movie);
 		void Remove(string id);
-	}
+        List<Movie> GetByGenre(string genre);
+        List<Movie> GetMoviesWithAward();
+    }
 }
 

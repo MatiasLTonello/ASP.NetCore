@@ -31,7 +31,7 @@ namespace Mflix.Models
         public DateTime? Released { get; set; } = null;
 
         [BsonElement("awards")]
-        public Award? awards { get; set; } = null; 
+        public Award awards { get; set; } = null!; 
     }
 }
 

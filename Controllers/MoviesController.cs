@@ -26,6 +26,18 @@ namespace Mflix.Controllers
             return movieService.Get(id);
         }
 
+        [HttpGet("genre={genre}")]
+        public ActionResult<List<Movie>> GetByGenre(string genre)
+        {
+            return movieService.GetByGenre(genre);
+        }
+
+        [HttpGet("wins")]
+        public ActionResult<List<Movie>> GetByWins()
+        {
+            return movieService.GetMoviesWithAward();
+        }
+
         [HttpPost]
         public ActionResult<Movie> Post([FromBody]Movie movie)
         {

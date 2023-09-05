@@ -23,9 +23,24 @@ namespace Mflix.Services
             return _movies.Find(movie => true).Limit(20).ToList();
         }
 
+     
+
         public Movie Get(string id)
         {
             return _movies.Find(movie => movie.Id == id).FirstOrDefault();
+        }
+
+        public List<Movie> GetByGenre(string genre)
+        {
+            
+            return _movies.Find(m => m.Genres.Contains(genre)).Limit(20).ToList();
+
+        }
+
+        public List<Movie> GetMoviesWithAward()
+        {
+         
+            return _movies.Find(m => m.awards.Wins > 0).Limit(20).ToList();
         }
 
         public void Remove(string id)

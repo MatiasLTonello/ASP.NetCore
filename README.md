@@ -4,13 +4,6 @@
 Guideline about information we learned during this project and consider it's useful
 
 
-
-
-
-
-
-
-
 ### Differences between NoSQL and SQL
 
 A database is a collection of useful data of one or more related organizations structured in a way to make data an asset to the organization. A database management system is a software designed to assist in maintaining and extracting large collections of data in a timely fashion.
@@ -87,3 +80,18 @@ Authentication and security: Provides options for authenticating and securing co
 ### MongoDB Usage examples
 
 [Examples](https://www.mongodb.com/docs/drivers/csharp/current/quick-start/)
+
+### Endpoints usage
+
+
+- CRUD Endpoints 
+- GetByGenre -> This endpoint will filter and return movies by the genre provided.
+- GetByWins -> This endpoint will filter and return movies that has at least one award win
+- GetByReleaseDate -> This endpoint will filter movies between an start date and end date
+
+
+
+
+### Design Patterns
+
+[Playlist with C# Design Patterns](https://www.youtube.com/playlist?list=PLWYKfSbdsjJiiaXNIW1OYhRnStsyGvr6t)

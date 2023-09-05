@@ -37,6 +37,13 @@ namespace Mflix.Services
 
         }
 
+        public List<Movie> GetMoviesByReleaseDate(DateTime? startDate, DateTime? endDate)
+        {
+          
+            return _movies.Find(m => m.Released >= startDate && m.Released <= endDate
+            ).Limit(20).ToList();
+        }
+
         public List<Movie> GetMoviesWithAward()
         {
          

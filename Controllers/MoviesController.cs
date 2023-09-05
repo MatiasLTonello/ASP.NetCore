@@ -38,6 +38,7 @@ namespace Mflix.Controllers
             return movieService.GetMoviesWithAward();
         }
 
+        
         [HttpPost]
         public ActionResult<Movie> Post([FromBody]Movie movie)
         {
@@ -59,6 +60,26 @@ namespace Mflix.Controllers
             movieService.Update(id, movie);
 
             return Ok($"Move updated");
+        }
+
+        [HttpGet("released")]
+        public ActionResult<List<Movie>> GetByReleaseDate(
+        [FromQuery] DateTime? startDate,
+        [FromQuery] DateTime? endDate)
+        {
+            if(startDate == null || endDate == null)
+            {
+                return BadRequest("You should provide an start date and end date");
+            }
+            
+            var filteredMovies = movieService.GetMoviesByReleaseDate(startDate, endDate);
+
+            if (filteredMovies == null || filteredMovies.Count == 0)
+            {
+                return NotFound("We dont found movies with this dates");
+            }
+
+            return filteredMovies;
         }
 
         [HttpDelete("{id}")]

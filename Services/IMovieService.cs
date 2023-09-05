@@ -12,6 +12,7 @@ namespace Mflix.Services
 		void Remove(string id);
         List<Movie> GetByGenre(string genre);
         List<Movie> GetMoviesWithAward();
+		List<Movie> GetMoviesByReleaseDate(DateTime? startDate, DateTime? endDate);
     }
 }
 

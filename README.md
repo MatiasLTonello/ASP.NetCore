@@ -81,6 +81,21 @@ Authentication and security: Provides options for authenticating and securing co
 
 [Examples](https://www.mongodb.com/docs/drivers/csharp/current/quick-start/)
 
+### Data Annotations
+
+DataAnnotations is a set of attributes that are used in application development in the .NET environment to add metadata to classes and data properties. These attributes are primarily used to specify constraints, validations, and other metadata that affect how objects behave in an application.
+
+Here are some examples of common DataAnnotations attributes and their usage:
+
+```c#
+[Required]: This attribute is used to mark properties that must have a non-null value on data entry. It is used for required field validation.
+csharp
+```
+```c#
+[Required].
+public string Name { get; set; }
+```
+
 ### Endpoints usage
 
 
